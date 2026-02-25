@@ -1,0 +1,14 @@
+services:
+  pack-factory:
+    build:
+      context: ..
+      dockerfile: infra/pack-factory.Dockerfile
+    container_name: lai-pack-factory
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ../_inputs:/data/in:ro
+      - ../_outputs:/data/out
+      - ../_audit:/data/audit
+      - ../_tmp:/data/tmp
+    command: ["--help"]
