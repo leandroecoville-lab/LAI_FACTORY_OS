@@ -1,0 +1,10 @@
+git clone https://github.com/<seu-usuário>/LAI_FACTORY_OS.git
+cd LAI_FACTORY_OS
+
+# criar estrutura correta
+mkdir -p .github/workflows
+cp caminho/para/ci.yml .github/workflows/
+
+git add .github/workflows/ci.yml
+git commit -m "feat(ci): add pipeline"
+git push origin main
